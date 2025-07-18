@@ -1,6 +1,6 @@
 .header {
 	background-color: #c0e4f4;
-	padding: 50px 0;
+	padding: 20px 0;
 
 	&__row {
 		display: flex;
@@ -8,7 +8,7 @@
 		align-items: center;
 	}
 
-	background-color: #999;
+	background-color: var(--accent);
 	// background-image: url('./../../img/komanda.jpg');
 	background-position: center center;
 	/* x y */
@@ -22,7 +22,7 @@
 }
 
 .header__nav {
-	@include tablet {
+	@include mobile {
 		display: none;
 	}
 }

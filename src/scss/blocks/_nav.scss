@@ -1,11 +1,51 @@
-.header__nav {
-}
+// .header__nav {}
+
 .nav {
 	font-size: 18px;
 }
+
 .nav__list {
 	display: flex;
-	column-gap: 30px;
+	column-gap: 10px;
 }
-.active {
+
+.nav__link {
+	transition: all 0.2s ease-in;
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: -0.04em;
+	color: var(--text-color-dark);
+	padding: 5px;
 }
+
+.nav__link:hover {
+	color: var(--accent);
+	background-color: var(--accent-dark);
+}
+
+.nav__btn {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: -0.04em;
+	text-transform: uppercase;
+	height: 25px;
+	color: var(--accent-dark);
+	padding: 0;
+
+	&-text {
+		padding: 5px 10px;
+	}
+
+	&:hover {
+		background-color: var(--accent-dark);
+	}
+}
+
+// .active {}

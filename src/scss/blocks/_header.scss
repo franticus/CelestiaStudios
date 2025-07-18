@@ -9,7 +9,7 @@
 	}
 
 	background-color: #999;
-	background-image: url('./../../img/komanda.jpg');
+	// background-image: url('./../../img/komanda.jpg');
 	background-position: center center;
 	/* x y */
 	background-size: cover;
@@ -17,7 +17,7 @@
 
 
 	@include mediaBg() {
-		background-image: url('./../../img/komanda@2x.jpg');
+		// background-image: url('./../../img/komanda@2x.jpg');
 	}
 }
 

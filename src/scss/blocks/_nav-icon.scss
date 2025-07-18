@@ -3,13 +3,13 @@
 	--time: 0.1s;
 
 	--width: 40px;
-	--height: 30px;
+	--height: 20px;
 
-	--line-height: 4px;
+	--line-height: 2px;
 	--spacing: 6px;
 
-	--color: #000;
-	--radius: 4px;
+	--color: var(--accent-dark);
+	--radius: 0px;
 
 	/* Fixed height and width */
 	/* height: var(--height); */
@@ -66,16 +66,17 @@
 .nav-icon.nav-icon--active::before,
 .nav-icon.nav-icon--active::after {
 	top: 0;
+	background-color: var(--accent);
 	transition: top var(--time) linear,
 		transform var(--time) ease-in var(--time);
 }
 
 .nav-icon.nav-icon--active::before {
-	transform: rotate(45deg);
+	transform: rotate(30deg);
 }
 
 .nav-icon.nav-icon--active::after {
-	transform: rotate(-45deg);
+	transform: rotate(-30deg);
 }
 
 /* Layout */

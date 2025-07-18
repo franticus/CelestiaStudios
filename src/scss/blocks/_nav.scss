@@ -18,11 +18,11 @@
 	letter-spacing: -0.04em;
 	color: var(--text-color-dark);
 	padding: 5px;
-}
 
-.nav__link:hover {
-	color: var(--accent);
-	background-color: var(--accent-dark);
+	&:hover {
+		color: var(--accent);
+		background-color: var(--accent-dark);
+	}
 }
 
 .nav__btn {
@@ -45,6 +45,27 @@
 
 	&:hover {
 		background-color: var(--accent-dark);
+	}
+}
+
+.no-scroll .nav__link {
+	font-size: 16px;
+	max-width: 150px;
+	margin: 0 auto;
+
+	&:hover {
+		background-color: var(--accent);
+		color: var(--accent-dark);
+	}
+}
+
+.no-scroll .nav__btn {
+	font-size: 16px;
+	max-width: 150px;
+	margin: 0 auto;
+
+	&:hover {
+		background-color: var(--accent);
 	}
 }
 

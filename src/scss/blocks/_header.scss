@@ -26,3 +26,20 @@
 		display: none;
 	}
 }
+
+.header__logo {
+	position: relative;
+	z-index: 999;
+
+	&--yellow {
+		display: none;
+	}
+}
+
+.no-scroll .header__logo--black {
+	display: none;
+}
+
+.no-scroll .header__logo--yellow {
+	display: inline-block;
+}

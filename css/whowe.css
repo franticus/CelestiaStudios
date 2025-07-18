@@ -1,0 +1,251 @@
+.whowe {
+	position: relative;
+}
+
+.whowe_title_container {
+	width: 100%;
+	display: flex;
+	margin-bottom: 40px;
+}
+
+.whowe_title {
+	flex: 0.5;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: -0.04em;
+	text-transform: uppercase;
+	color: var(--black);
+	white-space: nowrap;
+}
+
+.title_bg {
+	display: inline-block;
+	border-radius: 100px;
+	padding: 10px 20px;
+	background: #e7d9f1;
+}
+
+.whowe_title_description {
+	flex: 0.5;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 110%;
+	letter-spacing: -0.04em;
+	color: var(--black);
+	max-width: 500px;
+}
+
+.whowe .content {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	border-radius: 5px;
+	background-color: var(--white);
+}
+
+.whowe .whowe_list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.whowe .whowe_item {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	// border-top: 1px solid rgba(44, 5, 70, 0.2);
+}
+
+.whowe .left {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	flex: 0.5;
+}
+
+.whowe .whowe_item_title {
+	flex: 0.5;
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 110%;
+	letter-spacing: -0.04em;
+	text-transform: uppercase;
+	color: var(--black);
+	max-width: 430px;
+}
+
+.whowe .whowe_item_text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 110%;
+	letter-spacing: -0.04em;
+	color: rgba(0, 0, 0, 0.8);
+	max-width: 330px;
+}
+
+.whowe_item_color {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	border-radius: 100px;
+	background: #2c0546;
+	padding: 30px 0px;
+}
+
+.whowe_item_color .num_block {
+	display: flex;
+	flex-direction: column;
+	border-radius: 100px;
+	background: #2c0546;
+}
+
+.whowe_item_color .num_block:first-of-type {
+	padding-left: 60px;
+}
+
+.whowe_item_color .num {
+	font-weight: 600;
+	font-size: 100px;
+	line-height: 100%;
+	letter-spacing: -0.04em;
+	color: var(--white);
+}
+
+.whowe_item_color .num-text {
+	display: flex;
+	align-items: flex-start;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: -0.04em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1400px) {
+	.whowe_item_color .num {
+		font-size: 60px;
+	}
+
+	.whowe_item_color .num-text {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.whowe .whowe_item_title {
+		font-size: 16px;
+	}
+
+	.whowe .whowe_item_text {
+		font-size: 14px;
+		max-width: 400px;
+	}
+
+	.whowe_item_color {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+		padding: 30px 60px;
+		text-align: center;
+	}
+
+	.whowe_item_color .num_block:first-of-type {
+		padding-left: 0px;
+	}
+}
+
+@media (max-width: 768px) {
+	.whowe .content {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 20px;
+	}
+
+	.whowe_title_container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-bottom: 10px;
+	}
+
+	.whowe_title {
+		flex: 1;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 100%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		color: var(--black);
+		white-space: nowrap;
+		max-width: 100%;
+	}
+
+	.whowe_title_description {
+		flex: 1;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		color: var(--black);
+		max-width: 100%;
+	}
+
+	.whowe .whowe_list {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.whowe .whowe_item_title {
+		font-size: 18px;
+		max-width: 100%;
+	}
+
+	.whowe .whowe_item_text {
+		font-weight: 400;
+		font-size: 14px;
+		max-width: 100%;
+	}
+
+	.whowe .whowe_item {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.whowe .left {
+		display: flex;
+		flex-direction: column;
+		gap: 0px;
+	}
+
+	.whowe .whowe_list {
+		gap: 15px;
+	}
+
+	.whowe_item_color {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.whowe_item_color {
+		border-radius: 50px;
+		padding: 35px;
+	}
+
+	.whowe_item_color .num {
+		font-size: 60px;
+	}
+
+	.whowe_item_color .num-text {
+		font-size: 14px;
+	}
+}

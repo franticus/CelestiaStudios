@@ -48,6 +48,18 @@
 	}
 }
 
+.icon__bracket {
+	width: 5px;
+	height: 100%;
+	border-top: 2px solid var(--accent-dark);
+	border-left: 2px solid var(--accent-dark);
+	border-bottom: 2px solid var(--accent-dark);
+
+	&-right {
+		transform: rotate(180deg);
+	}
+}
+
 .no-scroll .nav__link {
 	font-size: 16px;
 	max-width: 150px;
@@ -63,9 +75,22 @@
 	font-size: 16px;
 	max-width: 150px;
 	margin: 0 auto;
+	height: 40px;
 
 	&:hover {
 		background-color: var(--accent);
+	}
+}
+
+.no-scroll .icon__bracket {
+	width: 5px;
+	height: 100%;
+	border-top: 2px solid var(--accent);
+	border-left: 2px solid var(--accent);
+	border-bottom: 2px solid var(--accent);
+
+	&-right {
+		transform: rotate(180deg);
 	}
 }
 

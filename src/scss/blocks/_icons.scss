@@ -11,18 +11,14 @@
 	height: 25px;
 }
 
-.icon--bracket {
-	fill: var(--accent-black);
+// .icon--bracket {
+// 	fill: var(--accent-black);
 
-	&:hover {
-		stroke: rgb(17, 193, 90);
-	}
+// 	&:hover {
+// 		stroke: rgb(17, 193, 90);
+// 	}
 
-	&-right {
-		transform: rotate(180deg);
-	}
-}
-
-.no-scroll .icon--bracket {
-	fill: var(--accent);
-}
+// 	&-right {
+// 		transform: rotate(180deg);
+// 	}
+// }

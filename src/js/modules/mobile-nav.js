@@ -1,8 +1,8 @@
 function mobileNav() {
-  // Mobile nav button
   const navBtn = document.querySelector('.mobile-nav-btn');
   const nav = document.querySelector('.mobile-nav');
   const menuIcon = document.querySelector('.nav-icon');
+  const navLinks = document.querySelectorAll('.mobile-nav a');
 
   const closeMenu = () => {
     nav.classList.remove('mobile-nav--open');
@@ -16,7 +16,14 @@ function mobileNav() {
     document.body.classList.toggle('no-scroll');
   };
 
-  // Автоматически закрывать меню при ширине >768
+  // Закрытие меню при клике на любой пункт
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
+  // Закрытие меню при изменении размера окна >768px
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
       closeMenu();

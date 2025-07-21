@@ -7,18 +7,14 @@
 .icon {
 	fill: transparent;
 	stroke: transparent;
-	width: 5px;
-	height: 25px;
+	width: 24px;
+	height: 24px;
 }
 
-// .icon--bracket {
-// 	fill: var(--accent-black);
-
-// 	&:hover {
-// 		stroke: rgb(17, 193, 90);
-// 	}
-
-// 	&-right {
-// 		transform: rotate(180deg);
-// 	}
-// }
+.icon--icon_facebook,
+.icon--icon_instagram,
+.icon--icon_son,
+.icon--icon_x {
+	fill: var(--accent-black);
+	stroke: var(--accent-black);
+}

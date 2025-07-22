@@ -1,6 +1,7 @@
 .hero {
 	position: relative;
 	background-color: var(--accent);
+	font-family: var(--font-accent);
 	padding-top: 20px;
 
 	&__title {

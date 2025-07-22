@@ -1,5 +1,6 @@
 .whyus {
 	padding: 60px 0;
+	font-family: var(--font-accent);
 
 	& .container {
 		display: grid;
@@ -42,5 +43,58 @@
 		letter-spacing: -0.04em;
 		text-transform: uppercase;
 		color: #ffb116;
+
+		@include mobile {
+			grid-column: 1;
+			font-size: 20px;
+		}
+	}
+
+	&__cards {
+		grid-column: 3 / -1;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 30px;
+
+		@include tablet {
+			grid-template-columns: 1fr;
+		}
+
+		@include mobile {
+			grid-template-columns: 1fr;
+			grid-column: 1 / -1;
+		}
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+
+		&__title {
+			font-weight: 800;
+			font-size: 150px;
+			line-height: 100%;
+			letter-spacing: -0.04em;
+			overflow: hidden;
+			height: 114px;
+			margin-bottom: 10px;
+
+			@include mobile {
+				font-size: 110px;
+				height: 83px;
+			}
+		}
+
+		&__subtitle {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 110%;
+			letter-spacing: -0.04em;
+			color: rgba(255, 177, 22, 0.6);
+
+			@include mobile {
+				font-size: 14px;
+			}
+		}
 	}
 }

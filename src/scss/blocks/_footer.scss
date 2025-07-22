@@ -11,7 +11,7 @@
 		height: 100%;
 		font-weight: 700;
 		font-size: 212px;
-		font-size: clamp(40px, 14vw, 212px);
+		font-size: clamp(40px, 14vw, 222px);
 		line-height: 100%;
 		letter-spacing: -0.04em;
 		text-transform: lowercase;
@@ -52,6 +52,10 @@
 		letter-spacing: -0.04em;
 		color: rgba(21, 21, 21, 0.6);
 	}
+
+	@include mobile {
+		margin-top: 30px;
+	}
 }
 
 .footer__links {
@@ -79,5 +83,29 @@
 		flex-direction: column;
 		grid-column: 4;
 		justify-self: end;
+	}
+
+	@include mobile {
+		grid-template-columns: 1fr;
+		gap: 30px;
+
+		.social {
+			grid-column: 1;
+			order: 3;
+			justify-self: start;
+		}
+
+		.main {
+			grid-column: 1;
+			justify-self: start;
+			gap: 5px;
+			margin-top: 20px;
+		}
+
+		.contact {
+			grid-column: 1;
+			justify-self: start;
+			gap: 5px;
+		}
 	}
 }

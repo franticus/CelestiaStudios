@@ -1,0 +1,154 @@
+.values {
+	padding: 60px 0;
+	font-family: var(--font-accent);
+
+	& .container {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 4fr;
+	}
+
+	&__title__container {
+		display: grid;
+		grid-column: 1 / -1;
+		grid-template-columns: 2fr 1fr 1fr 4fr;
+		margin-bottom: 40px;
+
+		@include mobile {
+			grid-template-columns: 1fr;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__subtitle {
+		grid-column: 1;
+
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		color: rgba(255, 177, 22, 0.8);
+
+		@include mobile {
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 45px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		color: #ffb116;
+
+		&-top {
+			grid-column: 2 / -1;
+
+			@include mobile {
+				grid-column: 1;
+				font-size: 20px;
+			}
+		}
+
+		&-bottom {
+			grid-column: 3 / -1;
+
+			@include mobile {
+				grid-column: 1;
+				font-size: 20px;
+			}
+		}
+	}
+
+	&__text {
+		grid-column: 3 / -1;
+		font-weight: 400;
+		max-width: 356px;
+		font-size: 16px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		color: rgba(255, 177, 22, 0.8);
+		margin-bottom: 40px;
+
+		@include mobile {
+			grid-column: 1 / -1;
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__slider {
+		grid-column: 1 / -1;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 1600px;
+		margin: 0 auto;
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+		padding: 0 40px;
+		min-height: 267px;
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 25px;
+			flex: 1;
+			height: 100%;
+			min-height: 267px;
+			border: 1px solid rgba(255, 177, 22, 0.2);
+
+			@include tablet {
+				padding: 20px;
+				min-height: 193px;
+			}
+
+			&-title {
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 120%;
+				letter-spacing: -0.04em;
+				text-transform: uppercase;
+				color: var(--accent);
+				margin-bottom: 85px;
+
+				@include tablet {
+					margin-bottom: 45px;
+				}
+
+				@include mobile {
+					font-size: 16px;
+				}
+			}
+
+			&-subtitle {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 110%;
+				letter-spacing: -0.04em;
+				color: rgba(255, 177, 22, 0.6);
+
+				@include mobile {
+					font-size: 14px;
+				}
+			}
+
+			@include mobile {
+				height: 224px;
+			}
+		}
+
+		@include tablet {
+			flex-direction: column;
+			min-height: 193px;
+		}
+
+		@include mobile {
+			padding: 0 10px;
+		}
+	}
+}

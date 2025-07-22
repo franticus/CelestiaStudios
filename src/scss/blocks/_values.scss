@@ -93,6 +93,7 @@
 		min-height: 267px;
 
 		&__item {
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -101,10 +102,13 @@
 			height: 100%;
 			min-height: 267px;
 			border: 1px solid rgba(255, 177, 22, 0.2);
+			margin-right: -1px;
 
 			@include tablet {
 				padding: 20px;
 				min-height: 193px;
+				margin-right: 0;
+				margin-bottom: -1px;
 			}
 
 			&-title {
@@ -149,6 +153,55 @@
 
 		@include mobile {
 			padding: 0 10px;
+		}
+	}
+
+	.box {
+		width: 16px;
+		height: 16px;
+		border: 1px solid var(--accent);
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		&_left-top {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: unset;
+			bottom: unset;
+			border-bottom: none;
+			border-right: none;
+		}
+
+		&_right-bottom {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: unset;
+			top: unset;
+			border-top: none;
+			border-left: none;
+		}
+
+		&_right-top {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: unset;
+			bottom: unset;
+			border-bottom: none;
+			border-left: none;
+		}
+
+		&_left-bottom {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: unset;
+			top: unset;
+			border-top: none;
+			border-right: none;
 		}
 	}
 }

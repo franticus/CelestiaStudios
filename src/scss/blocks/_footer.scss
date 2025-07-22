@@ -1,5 +1,5 @@
 .footer {
-	font-family: var(--accent-font);
+	font-family: var(--font-accent);
 	margin-top: auto;
 	background-color: var(--accent);
 	padding: 0;
@@ -11,7 +11,7 @@
 		height: 100%;
 		font-weight: 700;
 		font-size: 212px;
-		font-size: clamp(40px, 14vw, 222px);
+		font-size: clamp(40px, 13vw, 212px);
 		line-height: 100%;
 		letter-spacing: -0.04em;
 		text-transform: lowercase;

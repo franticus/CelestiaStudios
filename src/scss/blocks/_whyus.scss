@@ -1,0 +1,46 @@
+.whyus {
+	padding: 60px 0;
+
+	& .container {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 4fr;
+	}
+
+	&__title__container {
+		display: grid;
+		grid-column: 1 / -1;
+		grid-template-columns: 2fr 1fr 1fr 4fr;
+		margin-bottom: 40px;
+
+		@include mobile {
+			grid-template-columns: 1fr;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__subtitle {
+		grid-column: 1;
+
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		color: rgba(255, 177, 22, 0.8);
+
+		@include mobile {
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__title {
+		grid-column: 3 / -1;
+		font-weight: 600;
+		font-size: 45px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		color: #ffb116;
+	}
+}

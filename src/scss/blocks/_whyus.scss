@@ -53,7 +53,7 @@
 	&__cards {
 		grid-column: 3 / -1;
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(5, 1fr);
 		row-gap: 30px;
 
 		@include tablet {
@@ -69,6 +69,46 @@
 	&__card {
 		display: flex;
 		flex-direction: column;
+
+		&-first {
+			grid-column: 1 / 4;
+			grid-row: 1;
+
+			@include tablet {
+				grid-column: unset;
+				grid-row: unset;
+			}
+		}
+
+		&-second {
+			grid-column: 1 / 4;
+			grid-row: 2;
+
+			@include tablet {
+				grid-column: unset;
+				grid-row: unset;
+			}
+		}
+
+		&-third {
+			grid-column: 4 / -1;
+			grid-row: 1;
+
+			@include tablet {
+				grid-column: unset;
+				grid-row: unset;
+			}
+		}
+
+		&-fourth {
+			grid-column: 4 / -1;
+			grid-row: 2;
+
+			@include tablet {
+				grid-column: unset;
+				grid-row: unset;
+			}
+		}
 
 		&__title {
 			font-weight: 800;

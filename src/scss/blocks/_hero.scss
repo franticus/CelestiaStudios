@@ -89,6 +89,19 @@
 			max-width: 250px;
 		}
 
+		&__bg {
+			width: 100%;
+			max-width: 1600px;
+			margin: 0 auto;
+			height: 213px;
+			background-color: #999;
+			background-image: url('../../img/hero/hero_bg.jpg');
+			background-position: center center;
+			/* x y */
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
 		.cross {
 			position: absolute;
 			top: 20px;

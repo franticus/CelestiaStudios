@@ -6,6 +6,10 @@
 	color: var(--text-color-dark);
 
 	.footer__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		justify-content: flex-start;
 		white-space: nowrap;
 		margin-top: -2%;
 		margin-bottom: 20px;
@@ -13,7 +17,7 @@
 		height: 100%;
 		font-weight: 700;
 		font-size: 212px;
-		font-size: clamp(40px, 13vw, 212px);
+		font-size: clamp(40px, 13.3vw, 214px);
 		line-height: 100%;
 		letter-spacing: -0.04em;
 		text-transform: lowercase;
@@ -21,6 +25,28 @@
 
 		@include tablet {
 			margin-bottom: 0px;
+			justify-content: flex-start;
+			font-size: clamp(40px, 13.2vw, 214px);
+		}
+
+		@media (max-width: 1068px) {
+			font-size: clamp(40px, 13.1vw, 214px);
+		}
+
+		@media (max-width: 968px) {
+			font-size: clamp(40px, 12.8vw, 214px);
+		}
+
+		@media (max-width: 768px) {
+			font-size: clamp(40px, 13.7vw, 214px);
+		}
+
+		@media (max-width: 468px) {
+			font-size: clamp(40px, 13.4vw, 214px);
+		}
+
+		@media (max-width: 368px) {
+			font-size: clamp(40px, 13.3vw, 214px);
 		}
 	}
 
@@ -89,6 +115,10 @@
 		flex-direction: column;
 		align-items: flex-start;
 		grid-column: 3;
+
+		& li {
+			height: 25px;
+		}
 
 		& .footer__link {
 			padding: 4px 5px;

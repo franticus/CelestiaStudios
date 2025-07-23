@@ -1,0 +1,130 @@
+.contact {
+	padding: 60px 0;
+	font-family: var(--font-accent);
+
+	& .container {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 4fr;
+	}
+
+	&__title__container {
+		display: grid;
+		grid-column: 1 / -1;
+		grid-template-columns: 2fr 1fr 1fr 4fr;
+		margin-bottom: 40px;
+
+		@include mobile {
+			grid-template-columns: 1fr;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__subtitle {
+		grid-column: 1;
+
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		color: rgba(255, 177, 22, 0.8);
+
+		@include mobile {
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 45px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		color: #ffb116;
+
+		&-top {
+			grid-column: 2 / -1;
+
+			@include mobile {
+				grid-column: 1;
+				font-size: 20px;
+			}
+		}
+
+		&-bottom {
+			grid-column: 3 / -1;
+
+			@include mobile {
+				grid-column: 1;
+				font-size: 20px;
+			}
+		}
+	}
+
+	&__form {
+		grid-column: 3 / -1;
+		display: flex;
+		gap: 10px;
+		flex-direction: column;
+		font-weight: 400;
+		max-width: 564px;
+		font-size: 16px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		color: rgba(255, 177, 22, 0.8);
+		margin-bottom: 40px;
+
+		& input {
+			padding: 12px 20px;
+			border: 1px solid rgba(255, 177, 22, 0.2);
+
+			&::placeholder {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 110%;
+				letter-spacing: -0.04em;
+				color: rgba(255, 177, 22, 0.6);
+			}
+		}
+
+		& textarea {
+			resize: none;
+			padding: 12px 20px;
+			height: 88px;
+			border: 1px solid rgba(255, 177, 22, 0.2);
+
+			&::placeholder {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 110%;
+				letter-spacing: -0.04em;
+				color: rgba(255, 177, 22, 0.6);
+			}
+		}
+
+		&__text {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 100%;
+			letter-spacing: -0.04em;
+			color: rgba(255, 177, 22, 0.5);
+
+			& a {
+				color: rgba(255, 177, 22, 0.5);
+				cursor: pointer;
+
+				&:hover {
+					color: rgba(255, 177, 22, 0.8);
+					text-decoration: underline;
+				}
+			}
+		}
+
+		@include mobile {
+			grid-column: 1 / -1;
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+	}
+}

@@ -1,12 +1,12 @@
 <section class="contact">
 	<div class="container">
 		<div class="contact__title__container">
-			<h3 class="contact__subtitle">Contact us</h3>
-			<h2 class="contact__title contact__title-top">Building worlds that connect and inspire</h2>
-			<h2 class="contact__title contact__title-bottom">gamers everywhere</h2>
+			<h3 class="contact__subtitle">Contact</h3>
+			<h2 class="contact__title contact__title-top">Have questions, comments, or just</h2>
+			<h2 class="contact__title contact__title-bottom">want to talk ? Send us an email — we read everything!</h2>
 		</div>
 
-		<form class="contact__form">
+		<form class="contact__form" action="../../php/thanks_form.php" method="post">
 			<input type="text" class="contact__form__input" placeholder="Name">
 			<input type="email" class="contact__form__input" placeholder="E-mail">
 			<input type="text" class="contact__form__input" placeholder="Phone">
@@ -14,7 +14,13 @@
 			<p class="contact__form__text">By clicking the "Send Message" button, you confirm your consent to the processing
 				of personal data and agree to
 				the <a href="privacy-policy.html">privacy policy</a></p>
-			<button class="contact__form__btn">Send the message</button>
+			<button class="contact__form__btn">
+				<div class="icon__bracket icon__bracket-left">
+				</div>
+				<span class="nav__btn-text">Send the message</span>
+				<div class="icon__bracket icon__bracket-right">
+				</div>
+			</button>
 		</form>
 	</div>
 

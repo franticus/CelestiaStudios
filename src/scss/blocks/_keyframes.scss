@@ -1,0 +1,111 @@
+@keyframes pulse {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1.2);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(1.1);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1.2);
+	}
+}
+
+@keyframes pulseSize {
+	0% {
+		width: 19px;
+		height: 19px;
+	}
+
+	10% {
+		width: 14.5px;
+		height: 14.5px;
+	}
+
+	17% {
+		width: 17.5px;
+		height: 17.5px;
+	}
+
+	33% {
+		width: 13.5px;
+		height: 13.5px;
+	}
+
+	45% {
+		width: 19px;
+		height: 19px;
+	}
+
+	100% {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+@keyframes pulseWidth {
+	0% {
+		transform: scaleX(1);
+	}
+
+	10% {
+		transform: scaleX(1.1);
+	}
+
+	17% {
+		transform: scaleX(1.4);
+	}
+
+	33% {
+		transform: scaleX(1.1);
+	}
+
+	45% {
+		transform: scaleX(1.4);
+	}
+
+	100% {
+		transform: scaleX(1);
+	}
+}
+
+@keyframes pulseWidthRotate {
+	0% {
+		transform: scaleX(1) rotate(180deg);
+	}
+
+	10% {
+		transform: scaleX(1.1) rotate(180deg);
+	}
+
+	17% {
+		transform: scaleX(1.4) rotate(180deg);
+	}
+
+	33% {
+		transform: scaleX(1.1) rotate(180deg);
+	}
+
+	45% {
+		transform: scaleX(1.4) rotate(180deg);
+	}
+
+	100% {
+		transform: scaleX(1) rotate(180deg);
+	}
+}

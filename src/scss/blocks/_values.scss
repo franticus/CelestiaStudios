@@ -162,6 +162,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		animation: pulseSize 2s ease 0s infinite normal forwards;
 
 		&_left-top {
 			position: absolute;

@@ -75,6 +75,7 @@
 	bottom: 20px;
 	width: 20px;
 	height: 20px;
+	animation: pulse 2s ease 0s infinite normal forwards;
 
 	&::after {
 		content: '';
@@ -111,9 +112,11 @@
 	border-top: 2px solid var(--accent-dark);
 	border-left: 2px solid var(--accent-dark);
 	border-bottom: 2px solid var(--accent-dark);
+	animation: pulseWidth 2s ease 0s infinite normal forwards;
 
 	&-right {
 		transform: rotate(180deg);
+		animation: pulseWidthRotate 2s ease 0s infinite normal forwards;
 	}
 }
 

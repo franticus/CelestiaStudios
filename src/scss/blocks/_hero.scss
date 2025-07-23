@@ -2,7 +2,7 @@
 	position: relative;
 	background-color: var(--accent);
 	font-family: var(--font-accent);
-	padding-top: 20px;
+	padding-top: 40px;
 
 	&__title {
 		width: 100%;
@@ -44,7 +44,7 @@
 
 	.cross {
 		position: absolute;
-		top: 20px;
+		top: 0px;
 		left: 40px;
 		width: 30px;
 		height: 30px;
@@ -105,7 +105,7 @@
 
 		.cross {
 			position: absolute;
-			top: 20px;
+			top: -10px;
 			left: 10px;
 			width: 20px;
 			height: 20px;

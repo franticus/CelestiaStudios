@@ -83,6 +83,10 @@
 		line-height: 100%;
 		letter-spacing: -0.04em;
 		color: rgba(21, 21, 21, 0.6);
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	& span {
@@ -99,7 +103,6 @@
 .footer__links {
 	display: grid;
 	column-gap: 0px;
-	row-gap: 10px;
 	grid-template-columns: 2fr 1fr 1fr 4fr;
 
 	.social {
@@ -144,10 +147,36 @@
 	.contact {
 		display: flex;
 		column-gap: 10px;
+		row-gap: 5px;
 		flex-direction: column;
 		grid-column: 4;
 		justify-self: end;
 		text-transform: uppercase;
+
+		& li {
+			height: 25px;
+		}
+
+		& .footer__link {
+			padding: 4px 5px;
+			display: inline-block;
+			background-color: var(--accent);
+			transition: all 0.2s ease-in;
+
+			&:hover {
+				background-color: var(--accent-dark);
+				color: var(--text-color);
+			}
+		}
+
+		@include tablet {
+			row-gap: 0px;
+		}
+
+		@include mobile {
+			row-gap: 0px;
+		}
+
 	}
 
 	@include mobile {
@@ -169,7 +198,6 @@
 		.contact {
 			grid-column: 1;
 			justify-self: start;
-			gap: 5px;
 		}
 	}
 }

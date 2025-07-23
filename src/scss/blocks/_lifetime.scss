@@ -1,0 +1,127 @@
+.lifetime {
+	padding: 60px 0;
+	font-family: var(--font-accent);
+
+	& .container {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 4fr;
+	}
+
+	&__title__container {
+		display: grid;
+		grid-column: 1 / -1;
+		grid-template-columns: 2fr 1fr 1fr 4fr;
+		margin-bottom: 40px;
+
+		@include mobile {
+			grid-template-columns: 1fr;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__subtitle {
+		grid-column: 1;
+
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		color: rgba(255, 177, 22, 0.8);
+
+		@include mobile {
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__title {
+		grid-column: 3 / -1;
+		font-weight: 600;
+		font-size: 45px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		color: #ffb116;
+
+		@include mobile {
+			grid-column: 1;
+			font-size: 20px;
+		}
+	}
+
+	&__cards {
+		grid-column: 1 / -1;
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 4fr;
+		row-gap: 30px;
+
+		@include tablet {
+			grid-template-columns: 1fr;
+		}
+
+		@include mobile {
+			grid-template-columns: 1fr;
+			grid-column: 1 / -1;
+		}
+	}
+
+	&__card {
+		display: grid;
+		flex-direction: column;
+		grid-template-columns: 2fr 1fr 1fr 4fr;
+		grid-column: 1 / -1;
+
+		&__title {
+			position: relative;
+			display: grid;
+			grid-template-columns: 2fr 1fr 1fr 4fr;
+			grid-column: 1 / -1;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 120%;
+			letter-spacing: -0.04em;
+			text-transform: uppercase;
+			color: var(--text-color-dark);
+			background-color: var(--accent);
+			margin-bottom: 10px;
+
+			&-text {
+				grid-column: 3 / -1;
+				margin: 10px 0;
+			}
+
+			& .sun {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				width: 13px;
+
+				&-right {
+					left: auto;
+					right: 10px;
+					transform: rotate(180deg);
+				}
+			}
+
+			@include mobile {
+				font-size: 110px;
+				height: 83px;
+			}
+		}
+
+		&__subtitle {
+			grid-column: 3 / -1;
+			max-width: 356px;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 110%;
+			letter-spacing: -0.04em;
+			color: rgba(255, 177, 22, 0.6);
+
+			@include mobile {
+				font-size: 14px;
+			}
+		}
+	}
+}

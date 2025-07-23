@@ -80,6 +80,7 @@
 			width: 100%;
 			padding: 12px 20px;
 			border: 1px solid rgba(255, 177, 22, 0.2);
+			outline: none;
 
 			&::placeholder {
 				font-weight: 400;
@@ -106,6 +107,7 @@
 			padding: 12px 20px;
 			height: 88px;
 			border: 1px solid rgba(255, 177, 22, 0.2);
+			outline: none;
 
 			&::placeholder {
 				font-weight: 400;

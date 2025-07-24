@@ -43,50 +43,54 @@ const plumberNotify = title => {
 };
 
 gulp.task('html:dev', function() {
-  return gulp
-    .src([
-      './src/html/**/*.html',
-      '!./**/blocks/**/*.*',
-      '!./src/html/docs/**/*.*',
-    ])
-    .pipe(changed('./build/', { hasChanged: changed.compareContents }))
-    .pipe(plumber(plumberNotify('HTML')))
-    .pipe(fileInclude(fileIncludeSetting))
-    .pipe(
-      replace(
-        /(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
-        '$1./$4$5$7$1'
+  return (
+    gulp
+      .src([
+        './src/html/**/*.html',
+        '!./**/blocks/**/*.*',
+        '!./src/html/docs/**/*.*',
+      ])
+      .pipe(changed('./build/', { hasChanged: changed.compareContents }))
+      .pipe(plumber(plumberNotify('HTML')))
+      .pipe(fileInclude(fileIncludeSetting))
+      .pipe(
+        replace(
+          /(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
+          '$1./$4$5$7$1'
+        )
       )
-    )
-    .pipe(
-      typograf({
-        locale: ['ru', 'en-US'],
-        htmlEntity: { type: 'digit' },
-        safeTags: [
-          ['<\\?php', '\\?>'],
-          ['<no-typography>', '</no-typography>'],
-        ],
-      })
-    )
-    .pipe(
-      webpHTML({
-        extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
-        retina: {
-          1: '',
-          2: '@2x',
-        },
-      })
-    )
-    .pipe(
-      prettier({
-        tabWidth: 4,
-        useTabs: true,
-        printWidth: 182,
-        trailingComma: 'es5',
-        bracketSpacing: false,
-      })
-    )
-    .pipe(gulp.dest('./build/'));
+      // .pipe(
+      //   typograf({
+      //     locale: ['ru', 'en-US'],
+      //     htmlEntity: { type: 'digit' },
+      //     enableRule: ['space*'], // включить только нужные правила
+      //     disableRule: ['common/nbsp/*'], // 🔧 отключает все правила, связанные с &nbsp;
+      //     safeTags: [
+      //       ['<\\?php', '\\?>'],
+      //       ['<no-typography>', '</no-typography>'],
+      //     ],
+      //   })
+      // )
+      .pipe(
+        webpHTML({
+          extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
+          retina: {
+            1: '',
+            2: '@2x',
+          },
+        })
+      )
+      .pipe(
+        prettier({
+          tabWidth: 4,
+          useTabs: true,
+          printWidth: 182,
+          trailingComma: 'es5',
+          bracketSpacing: false,
+        })
+      )
+      .pipe(gulp.dest('./build/'))
+  );
 });
 
 gulp.task('sass:dev', function() {

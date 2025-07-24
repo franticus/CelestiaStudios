@@ -42,21 +42,37 @@
 		text-transform: uppercase;
 		color: #ffb116;
 
+		&_wrapper {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			grid-column: 2 / -1;
+
+			@include mobile {
+				display: block;
+				grid-column: 1;
+				grid-row: 2;
+			}
+		}
+
 		&-top {
+			grid-column: 1 / -1;
+
+			@include mobile {
+				display: inline;
+				grid-column: 1;
+				font-size: 20px;
+				width: 100%;
+			}
+		}
+
+		&-bottom {
 			grid-column: 2 / -1;
 
 			@include mobile {
 				grid-column: 1;
 				font-size: 20px;
-			}
-		}
-
-		&-bottom {
-			grid-column: 3 / -1;
-
-			@include mobile {
-				grid-column: 1;
-				font-size: 20px;
+				display: inline;
+				width: 100%;
 			}
 		}
 	}
@@ -188,6 +204,14 @@
 			grid-column: 1 / -1;
 			font-size: 16px;
 			margin-bottom: 20px;
+		}
+	}
+
+	.mobileHide {
+		display: none;
+
+		@include mobile {
+			display: block;
 		}
 	}
 }

@@ -73,16 +73,16 @@ gulp.task('html:docs', function() {
           '$1./$4$5$7$1'
         )
       )
-      .pipe(
-        typograf({
-          locale: ['ru', 'en-US'],
-          htmlEntity: { type: 'digit' },
-          safeTags: [
-            ['<\\?php', '\\?>'],
-            ['<no-typography>', '</no-typography>'],
-          ],
-        })
-      )
+      // .pipe(
+      //   typograf({
+      //     locale: ['ru', 'en-US'],
+      //     htmlEntity: { type: 'digit' },
+      //     safeTags: [
+      //       ['<\\?php', '\\?>'],
+      //       ['<no-typography>', '</no-typography>'],
+      //     ],
+      //   })
+      // )
       .pipe(
         webpHTML({
           extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],

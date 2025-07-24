@@ -41,22 +41,37 @@
 		letter-spacing: -0.04em;
 		text-transform: uppercase;
 		color: #ffb116;
+		display: inline;
 
-		&-top {
+		&_wrapper {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
 			grid-column: 2 / -1;
 
 			@include mobile {
+				display: block;
 				grid-column: 1;
+				grid-row: 2;
+			}
+		}
+
+		&-top {
+			grid-column: 1 / -1;
+
+			@include mobile {
+				grid-column: unset;
 				font-size: 20px;
+				display: inline;
 			}
 		}
 
 		&-bottom {
-			grid-column: 3 / -1;
+			grid-column: 2 / -1;
 
 			@include mobile {
-				grid-column: 1;
+				grid-column: unset;
 				font-size: 20px;
+				display: inline;
 			}
 		}
 	}
@@ -78,6 +93,9 @@
 			flex: 0 0 auto;
 
 			&-link {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
 				font-weight: 600;
 				font-size: 20px;
 				line-height: 120%;
@@ -85,6 +103,10 @@
 				text-transform: uppercase;
 				color: var(--text-color);
 				margin-top: 15px;
+
+				@include mobile {
+					font-size: 16px;
+				}
 			}
 
 			& img {

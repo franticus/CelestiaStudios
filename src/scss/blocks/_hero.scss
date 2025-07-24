@@ -139,4 +139,12 @@
 			}
 		}
 	}
+
+	.mobileHide {
+		display: none;
+
+		@include mobile {
+			display: block;
+		}
+	}
 }

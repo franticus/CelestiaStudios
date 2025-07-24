@@ -204,5 +204,9 @@
 			border-top: none;
 			border-right: none;
 		}
+
+		@include mobile {
+			animation: pulseSizeMobile 2s ease 0s infinite normal forwards;
+		}
 	}
 }
